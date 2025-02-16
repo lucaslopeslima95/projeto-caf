@@ -1,6 +1,6 @@
 <x-app-layout>
     <main class="flex-1 p-6 ">
-        <h2 class="text-2xl font-bold mt-4">Olá, {{ Auth::user()->name }}</h2>
+        <h2 class="text-2xl font-bold mt-4">Seja Bem vindo, {{ Auth::user()->name }}</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
             <div class="card bg-base-200 p-4">Você não possui pagamentos pendentes</div>
             <div class="card bg-base-200 p-4">Você não possui vendas para enviar</div>
