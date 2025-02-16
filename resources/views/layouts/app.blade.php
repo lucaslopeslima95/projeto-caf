@@ -24,18 +24,12 @@
                 <h1 class="text-xl font-bold mb-4">C.A.F</h1>
                 <ul class="menu menu-vertical p-0">
                     <li class="">Página Inicial</li>
-                    <li class="menu-title">Cadastro</li>
+                    <li class="menu-title">Menus</li>
                     <li><a href="#">Beneficiarios</a></li>
-                    <li><a href="{{ route('usuario.index') }}">Usuário</a></li>
-                    <li><a href="#">Projeto</a></li>
-                    <li><a href="#">Questionarios</a></li>
-                    <li><a href="#">Perguntas</a></li>
-
-                    <li class="menu-title">Consultas</li>
-                    <li><a href="#">Beneficiarios</a></li>
-                    <li><a href="#">Usuários</a></li>
+                    <li><a href="{{ route('usuario.index') }}">Usuários</a></li>
                     <li><a href="#">Projetos</a></li>
                     <li><a href="#">Questionarios</a></li>
+                    <li><a href="#">Perguntas</a></li>
                     <li><a href="{{ route('logout')}}">Sair</a></li>
                 </ul>
             </aside>
