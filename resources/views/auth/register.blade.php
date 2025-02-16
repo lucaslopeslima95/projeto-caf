@@ -1,4 +1,5 @@
 <x-guest-layout>
+   
     <div class="flex flex-col content-center 2">
         <x-application-logo />
         <form method="POST" action="{{ route('register') }}">
@@ -51,18 +52,27 @@
                 </label>
             </div>
 
+            @auth
+            <div class="flex justify-center  mt-8">
+                <x-primary-button class="btn btn-primary text-white bg-blue-500">
+                    Salvar
+                </x-primary-button>
+                <a class="btn btn-sencondary" href="{{route('dashboard')}}">Voltar</a>
+            </div>
+            @endauth
+            @guest
             <div class="flex pt-8 space-x-20">
                 <x-primary-button class="flex w-full space-x-2 bg-sky-500/30 btn btn-wide">
                     {{ __('Register') }}
                 </x-primary-button>
             </div>
             
-            
             <div class="flex flex-row justify-center pt-4">
                 <a cclass="link link-hover" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
                 </a>
             </div>
+            @endguest
         </form>
     </div>
 </x-guest-layout>
