@@ -32,10 +32,21 @@ class RegisteredUserController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'name'     => ['required', 'string', 'max:255'],
+            'email'    => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'image'    => ['image','mimes:jpeg,png,jpg,gif,png']
         ]);
+
+        $imagePath = '';
+
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('public/images'); // Salva em storage/app/public/images
+            
+            // Pegando apenas o nome do arquivo (sem "public/")
+            $imageName = str_replace('public/', '', $imagePath);
+        }
+
 
 
         DB::beginTransaction();
@@ -44,7 +55,7 @@ class RegisteredUserController extends Controller
                 'name' => $request->name,
                 'email' => $request->email,
                 'password' => Hash::make($request->password),
-                'integrationHash' => Str::random(40),
+                'integrationHash' =>   $imageName,
             ]);
 
             event(new Registered($user));
@@ -52,7 +63,7 @@ class RegisteredUserController extends Controller
             Auth::login($user);
 
             DB::commit();
-            return redirect(route('dashboard', absolute: false));
+            return redirect(route('/dashboard', absolute: false));
         } catch (\Exception $e) {
             DB::rollBack();
             return back()->withErrors(['error' => 'Erro ao criar usuário. Por favor, tente novamente.'])->withInput();
