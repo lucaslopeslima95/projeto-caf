@@ -15,7 +15,7 @@ class ProfileController extends Controller
 
     public function index(Request $request){
         $users = User::all();
-        return view('users.show-user',['users'=>$users]);
+        return view('profile.list-user',['users'=>$users]);
     }
     /**
      * Display the user's profile form.

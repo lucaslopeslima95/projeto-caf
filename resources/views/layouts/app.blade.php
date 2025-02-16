@@ -26,7 +26,7 @@
                     <li class="">Página Inicial</li>
                     <li class="menu-title">Menus</li>
                     <li><a href="#">Beneficiarios</a></li>
-                    <li><a href="{{ route('usuario.index') }}">Usuários</a></li>
+                    <li><a href="{{ route('profile.index') }}">Usuários</a></li>
                     <li><a href="#">Projetos</a></li>
                     <li><a href="#">Questionarios</a></li>
                     <li><a href="#">Perguntas</a></li>
