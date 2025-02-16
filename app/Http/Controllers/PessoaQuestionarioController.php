@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\PessoaQuestionario;
-use App\Models\Pessoa;
-use App\Models\Questionario;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 

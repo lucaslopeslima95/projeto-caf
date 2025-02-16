@@ -27,7 +27,6 @@ class PessoaQuestionarioSeeder extends Seeder
                 PessoaQuestionario::create([
                     'pessoa_id' => $pessoa->id,
                     'questionario_id' => $questionario->id,
-                    'data_resposta' => now(),
                 ]);
             }
         }
