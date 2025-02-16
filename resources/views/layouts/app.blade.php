@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ config('app.name', 'Dymob') }}</title>
+    <title>{{ config('app.name', 'C.A.F') }}</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
@@ -21,18 +21,22 @@
             <aside class="fixed md:relative inset-y-0 left-0 w-64 bg-base-200 p-4 z-50 transition-transform transform -translate-x-full md:translate-x-0 md:h-full" id="sidebar">
                 <x-theme-selector />
                 <button class="md:hidden" id="close-toggle">&larr;</button>
-                <h1 class="text-xl font-bold mb-4">Dymob</h1>
+                <h1 class="text-xl font-bold mb-4">C.A.F</h1>
                 <ul class="menu menu-vertical p-0">
                     <li class="">Página Inicial</li>
-                    <li><a href="#">Estatísticas</a></li>
-                    <li class="menu-title">Administrar</li>
-                    <li><a href="#">Vendas</a></li>
-                    <li><a href="#">Produtos</a></li>
-                    <li><a href="#">Nuvem Pago</a></li>
-                    <li><a href="#">Nuvem Envio</a></li>
-                    <li><a href="#">Clientes</a></li>
-                    <li><a href="#">Descontos</a></li>
-                    <li><a href="#">Marketing</a></li>
+                    <li class="menu-title">Cadastro</li>
+                    <li><a href="#">Beneficiarios</a></li>
+                    <li><a href="{{ route('usuario.index') }}">Usuário</a></li>
+                    <li><a href="#">Projeto</a></li>
+                    <li><a href="#">Questionarios</a></li>
+                    <li><a href="#">Perguntas</a></li>
+
+                    <li class="menu-title">Consultas</li>
+                    <li><a href="#">Beneficiarios</a></li>
+                    <li><a href="#">Usuários</a></li>
+                    <li><a href="#">Projetos</a></li>
+                    <li><a href="#">Questionarios</a></li>
+                    <li><a href="{{ route('logout')}}">Sair</a></li>
                 </ul>
             </aside>
         </div>
