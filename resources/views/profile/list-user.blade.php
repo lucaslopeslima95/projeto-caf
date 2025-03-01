@@ -34,7 +34,7 @@
                         </td>
                         <td>{{$user->email}}</td>
                         <th align="right">
-                            <a  href="{{ route('profile.edit',['profile'=>$user]) }}" class="btn btn-ghost btn-xs">Detalhes</a>
+                            <a  href="{{ route('profile.edit',['profile'=>$user]) }}" class="btn btn-ghost btn-xs">Editar</a>
                         </th>
                     </tr>
                     @endforeach
@@ -42,7 +42,7 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <th >Nome</th>
+                        <th>Nome</th>
                         <th>Função</th>
                         <th>Contato</th>
                         <th align="right">Ação</th>

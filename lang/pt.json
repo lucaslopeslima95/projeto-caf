@@ -21,7 +21,15 @@
     "Password": "Senha",
     "Already registered?": "Já está registrado?",
     "Register": "Cadastrar",
-    "Forgot your password?": "Esqueceu sua senha?",
     "No problems, Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.": "Sem problemas, basta nos informar seu endereço de e-mail e enviaremos um link de redefinição de senha que permitirá que você escolha um novo.",
-    "Password Reset": "Redefinir Senha"
+    "Password Reset": "Redefinir Senha",
+    "Update your account's profile information and email address.":"Atualize sua senha  e endereço de email.",
+    "Profile Information":"Informações de perfil",
+    "Save":"Salvar",
+    "Saved":"Salvo",
+    "Update Password":"Atualizar Senha",
+    "Ensure your account is using a long, random password to stay secure.":"Melhore a segurança da sua conta usando uma senha aleatória e longa.",
+    "Current Password":"Senha Atual",
+    "New Password":"Nova senha"
+
 }
